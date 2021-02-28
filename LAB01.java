@@ -63,7 +63,7 @@ class Solution{
         task2.Solve2();
         Second_degree_equation task3=new Second_degree_equation(2,5,2);
         task3.Solve3();
-        //fffffffffffffffffffffffff
+        
 
     }
 }
