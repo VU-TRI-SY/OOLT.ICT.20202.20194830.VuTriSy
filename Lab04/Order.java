@@ -1,5 +1,3 @@
-package oolt_lab;
-
 public class Order {
 	public static final int MAX_NUMBERS_ORDERS = 10;
 	public static final int  MAX_LIMITTED_ORDERS=2;
