@@ -1,5 +1,3 @@
-package oolt_lab;
-
 public class Aims {
 	public static void main(String[] args) {
 		Order anOrder =new Order(new MyDate(20,2,2001));
