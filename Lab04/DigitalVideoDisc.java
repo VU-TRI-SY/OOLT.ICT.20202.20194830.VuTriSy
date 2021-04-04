@@ -1,5 +1,3 @@
-package oolt_lab;
-
 public class DigitalVideoDisc {
 	private String title;
 	private String category;
