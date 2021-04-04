@@ -1,5 +1,3 @@
-package oolt_lab;
-
 public class TestPassingParameter {
 
 	public static void main(String[] args) {
