@@ -9,9 +9,6 @@ public class Order {
 			super();
 			this.dateOrdered = dateOrdered;
 			nbOrders++;
-			if(nbOrders==MAX_LIMITTED_ORDERS) {
-				System.out.println("CANNOT MAKE NEW ORDER!");
-			}
 	}
 	
 	public static int getNbOrders() {
@@ -77,10 +74,13 @@ public class Order {
 			}
 		}
 	}
-	public void list() {
+	public static boolean checkNbOrders(){
+		return nbOrders==MAX_LIMITTED_ORDERS;
+	}
+	public void display() {
 		float sum=0;
 		System.out.println("***********************Order********************************************************");
-		System.out.println("Date:");dateOrdered.print_i();
+		System.out.println("Date:");dateOrdered.print();
 		System.out.println("Ordered Items:");
 		for(int j=0;j<qtyOrdered;j++) {
 			System.out.println(j+1+". DVD - "+itemsOrdered[j].getTitle()+" - "+itemsOrdered[j].getCategory()+" - "+itemsOrdered[j].getDirectory()+" - "+
