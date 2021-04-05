@@ -1,5 +1,4 @@
 package hust.soict.globalict.aims.utils;
-
 public class MyDate {
 	int day;
 	int month;
@@ -48,8 +47,9 @@ public class MyDate {
 	}
 
 	public void print() {
-    	String Month;
     	String Day;
+		String Month;
+    	int valid_date=1;
     	switch(month) {
     		case 1: Month="January";
     		break;
@@ -78,22 +78,30 @@ public class MyDate {
     		default:Month="Invalid month";
     		break;
     	}
-    	if(day>31||day<1){
-    		Day="Invalid day";
-    	}else {
-    		if(day%10==1) {
+    	
+		if(month<=0||month>12){
+			valid_date=0;
+		}
+		if(day<=0||day>31) valid_date=0;
+		int leapyear=0;
+		if(year%400==0) leapyear=1;
+		if(year%100!=0&&year%4==0) leapyear=1;
+		if(leapyear==1){
+			if(day!=29) valid_date=0;
+		}
+		if(valid_date==1){
+			if(day%10==1) {
     			Day=day+"st";
     		}else {
     			if(day%10==2) {
     				Day=day+"nd";
     			}else Day=day+"th";
     		}
-    	}
-    	System.out.println(Month+" "+Day+" "+year);
-    	
+			System.out.println(Month+" "+Day+" "+year);
+		}else System.out.println("Invalid date");
     }
     public void printf_free_format() {
     	System.out.println(day+"/"+month+"/"+year);
     }
-	
 }
+	
