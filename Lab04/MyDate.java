@@ -1,3 +1,4 @@
+package hust.soict.globalict.aims.utils;
 public class MyDate {
 	int day;
 	int month;
@@ -46,8 +47,8 @@ public class MyDate {
 	}
 
 	public void print() {
-    	String day;
-		String month;
+    	String Day;
+		String Month;
     	int valid_date=1;
     	switch(month) {
     		case 1: Month="January";
@@ -102,4 +103,5 @@ public class MyDate {
     public void printf_free_format() {
     	System.out.println(day+"/"+month+"/"+year);
     }
+}
 	
