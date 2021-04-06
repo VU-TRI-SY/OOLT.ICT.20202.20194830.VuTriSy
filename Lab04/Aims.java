@@ -1,6 +1,6 @@
 public class Aims {
 	public static void main(String[] args) {
-		if(checkNbOrders()!=true){
+	
 			Order anOrder =new Order(new MyDate(20,2,2001));
 			DigitalVideoDisc dvd1=new DigitalVideoDisc("The Lion King","Animation",
 				"Roger Allers",87,19.95f);
@@ -14,9 +14,9 @@ public class Aims {
 			System.out.print("Total Cost is: ");
 			System.out.println(anOrder.totalCost());
 			anOrder.display();
-		}
-		if(checkNbOrders()!=true){
-			Order anOrder1 =new Order(new MyDate(20,2,2001));
+		
+		
+			Order anOrder1 =new Order(new MyDate(29,2,2021));
 			DigitalVideoDisc dvd11=new DigitalVideoDisc("The Lion King","Animation",
 				"Roger Allers",87,19.95f);
 			anOrder1.addDigitalVideoDisc(dvd11);
@@ -29,6 +29,6 @@ public class Aims {
 			System.out.print("Total Cost is: ");
 			System.out.println(anOrder.totalCost());
 			anOrder1.display();
-		}
+		
 	}
 }
