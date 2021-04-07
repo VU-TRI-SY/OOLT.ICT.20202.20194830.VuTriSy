@@ -4,6 +4,7 @@ import java.util.*;
 public class GarbageCreator {
 	public static void main(String []args) throws Exception {
 		long start =System.currentTimeMillis();
+		@SuppressWarnings("unused")
 		String s="";
 		File file=new File("D:\\GarbageTest.txt");
 		Scanner sc=new Scanner(file);
