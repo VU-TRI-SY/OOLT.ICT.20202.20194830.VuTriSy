@@ -85,16 +85,6 @@ public class Aims{
 						i++;
 					}
 					System.out.println("*************************************");
-					Collections.sort(anOrder.getItemsOrdered());
-					System.out.println("The items in sorted order are:");
-					i=1;
-					for(Media media:anOrder.getItemsOrdered()) {
-						System.out.println(i+":");
-						media.displayItem();
-						System.out.println();
-						i++;
-					}
-					System.out.println("*************************************");
 				}else System.out.println("There is no order to display");
 				break;
 			case 0:

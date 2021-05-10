@@ -1,41 +1,19 @@
 package hust.soict.globalict.aims.media;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
-import java.util.StringTokenizer;
-import java.util.TreeMap;
-
 import javax.swing.JOptionPane;
 public class Book extends Media{
 	private List<String> authors = new ArrayList<String>();
-	private String content;
-	List<String> contentTokens = new ArrayList<String>();
-	Map<String,Integer> wordFrequency = new TreeMap<String,Integer>();
 	public Book() {
 		super();
-	}
-	public Book(String content) {
-		this.content = content;
 	}
 	public Book(String id,String title, String category,List<String>authors,float cost) {
 		super(id,title,category,cost);
 		this.authors=authors;
 	}
-	public Book(String id,String title, String category,List<String>authors,float cost,String content) {
-		super(id,title,category,cost);
-		this.authors=authors;
-		this.content = content;
+	public Book(String title) {
+		super(title);
 	}
-	public List<String> getContentTokens() {
-		return contentTokens;
-	}
-	public Map<String, Integer> getWordFrequency() {
-		return wordFrequency;
-	}
-	public String getContent() {
-		return content;
-	}
-	
 	public List<String> getAuthors() {
 		return authors;
 	}
@@ -76,29 +54,4 @@ public class Book extends Media{
 		}
 		System.out.println("Book Cost:"+this.getCost());
 	}
-	public int compareTo(Media o) {
-		return this.getTitle().compareTo(o.getTitle());
-	}
-	public String processContent() {
-		String regex = "[!._,'@? ]";
-        StringTokenizer str = new StringTokenizer(this.content,regex);
-		StringBuffer result = new StringBuffer();
-		 while(str.hasMoreTokens()) {
-	            String s=str.nextToken();
-	            contentTokens.add(s);
-	    }
-		contentTokens.sort(null);
-		for(String s:contentTokens) {
-			result.append(s+" ");
-			wordFrequency.put(s,s.length());
-		}
-		result.append("\n");
-		for (Map.Entry<String, Integer> e : wordFrequency.entrySet()) result.append(e.getKey() + " "+ e.getValue()+"\n");
-		String ans = result.toString();
-		return ans;
-	}
-	public String toString() {
-        return String.format(this.getId()+"\n"+this.getTitle()+"\n"+this.getCategory()+"\n"+this.getAuthors()+"\n"+
-	this.getCost()+"\n"+this.content+"\n"+this.processContent());
-    }
 }

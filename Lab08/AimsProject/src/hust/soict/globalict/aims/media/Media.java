@@ -42,5 +42,8 @@ abstract public class Media implements Comparable<Media>{
 			return this.id==c.id;
 		}else return false;
 	}
+	public int compareTo(Media o) {
+		return this.title.compareTo(o.getTitle());
+	}
 }
 

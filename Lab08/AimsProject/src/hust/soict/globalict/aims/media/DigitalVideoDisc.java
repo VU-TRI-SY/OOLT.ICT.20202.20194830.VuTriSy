@@ -34,8 +34,4 @@ public class DigitalVideoDisc extends Disc implements Playable{
 		System.out.println("DVD Cost:"+this.getCost());
 	}
 	
-	@Override
-	public int compareTo(Media o) {
-		return (int) (this.getCost()-o.getCost());
-	}
 }
